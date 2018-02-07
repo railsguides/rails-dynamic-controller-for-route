@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+SUPPORTED_VERSIONS = %w[v1 v2]
+
 module ApiRedirect
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

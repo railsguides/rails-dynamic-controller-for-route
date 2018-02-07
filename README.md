@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation:
 
-Things you may want to cover:
+- `bundle install`
+- `rails s`
 
-* Ruby version
+## Test:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `curl localhost:3000/v1/categories`
+- `curl localhost:3000/v1/users`
+- `curl localhost:3000/v2/users`
