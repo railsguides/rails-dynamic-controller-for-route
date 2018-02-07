@@ -11,10 +11,14 @@ Rails.application.routes.draw do
     ->(request) { request.params[:version] <= v.to_s }
   end
 
+  def first_version(v)
+    ->(request) { request.params[:version] >= v.to_s }
+  end
+
   namespace :vv, ns_params do
     scope path: ':version' do
       resources :categories
-      resources :users
+      resources :users, constraints: first_version(:v2)
       resources :products, constraints: latest_version(:v1)
     end
   end
